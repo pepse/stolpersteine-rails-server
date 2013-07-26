@@ -11,8 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20130726103519) do
+ActiveRecord::Schema.define(version: 20130726112117) do
+
+  create_table "biographies", force: true do |t|
+    t.string   "name"
+    t.string   "adress"
+    t.string   "geburtsname"
+    t.datetime "verlegedatum"
+    t.datetime "geburtstag"
+    t.string   "geburtsort"
+    t.text     "biografie"
+    t.text     "info"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "location_id"
+  end
 
   create_table "locations", force: true do |t|
     t.string   "bezirk"
@@ -25,22 +38,4 @@ ActiveRecord::Schema.define(version: 20130726103519) do
 
   add_index "locations", ["lnglat"], :name => "index_locations_on_lnglat", :spatial => true
 
-=======
-ActiveRecord::Schema.define(version: 20130726104821) do
-
-  create_table "biographies", force: true do |t|
-    t.string   "name"
-    t.string   "adress"
-    t.string   "geburtsname"
-    t.datetime "verlegerdatum"
-    t.datetime "geburtstag"
-    t.string   "geburtsort"
-    t.text     "biografie"
-    t.text     "info"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "location_id"
-  end
-
->>>>>>> b9d3b82547e30751751fd659555254ea5db02204
 end
