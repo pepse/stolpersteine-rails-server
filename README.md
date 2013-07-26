@@ -21,7 +21,7 @@ returns all the locations
 ### POST
 creates a new location
 
-@params: 
+@params: <br />
 location[bezirk]<br />
   location[ortsteil]<br />
   location[adresse]<br />
@@ -45,7 +45,7 @@ biographies.json
 ### POST
 creates a new biography
 
-@params: 
+@params: <br />
   biography[name]<br />
   biography[adresse]<br />
   biography[geburtsname]<br />
