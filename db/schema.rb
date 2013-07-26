@@ -11,15 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130726112117) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-  enable_extension "postgis"
+ActiveRecord::Schema.define(version: 20130726125613) do
 
   create_table "biographies", force: true do |t|
     t.string   "name"
-    t.string   "adress"
+    t.string   "adresse"
     t.string   "geburtsname"
     t.datetime "verlegedatum"
     t.datetime "geburtstag"
