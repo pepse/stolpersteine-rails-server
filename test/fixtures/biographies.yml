@@ -2,7 +2,7 @@
 
 one:
   name: MyString
-  adress: MyString
+  adresse: MyString
   geburtsname: MyString
   verlegedatum: 2013-07-26 12:26:59
   geburtstag: 2013-07-26 12:26:59
@@ -12,7 +12,7 @@ one:
 
 two:
   name: MyString
-  adress: MyString
+  adresse: MyString
   geburtsname: MyString
   verlegedatum: 2013-07-26 12:26:59
   geburtstag: 2013-07-26 12:26:59
