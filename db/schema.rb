@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20130726104821) do
     t.string   "name"
     t.string   "adress"
     t.string   "geburtsname"
-    t.datetime "verlegerdatum"
+    t.datetime "verlegedatum"
     t.datetime "geburtstag"
     t.string   "geburtsort"
     t.text     "biografie"
