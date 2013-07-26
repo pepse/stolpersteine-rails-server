@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bezirk: MyString
+  ortsteil: MyString
+  adresse: MyString
+
+two:
+  bezirk: MyString
+  ortsteil: MyString
+  adresse: MyString
