@@ -1,0 +1,41 @@
+<h1>Listing biographies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Adress</th>
+      <th>Geburtsname</th>
+      <th>Verlegerdatum</th>
+      <th>Geburtstag</th>
+      <th>Geburtsort</th>
+      <th>Biografie</th>
+      <th>Info</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @biographies.each do |biography| %>
+      <tr>
+        <td><%= biography.name %></td>
+        <td><%= biography.adress %></td>
+        <td><%= biography.geburtsname %></td>
+        <td><%= biography.verlegerdatum %></td>
+        <td><%= biography.geburtstag %></td>
+        <td><%= biography.geburtsort %></td>
+        <td><%= biography.biografie %></td>
+        <td><%= biography.info %></td>
+        <td><%= link_to 'Show', biography %></td>
+        <td><%= link_to 'Edit', edit_biography_path(biography) %></td>
+        <td><%= link_to 'Destroy', biography, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Biography', new_biography_path %>
