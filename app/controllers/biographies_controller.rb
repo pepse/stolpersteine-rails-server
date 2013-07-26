@@ -70,6 +70,6 @@ class BiographiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def biography_params
-      params.require(:biography).permit(:name, :adress, :geburtsname, :verlegerdatum, :geburtstag, :geburtsort, :biografie, :info)
+      params.require(:biography).permit(:name, :adress, :geburtsname, :verlegedatum, :geburtstag, :geburtsort, :biografie, :info)
     end
 end
