@@ -22,9 +22,9 @@ returns all the locations
 creates a new location
 
 @params: 
-location[bezirk]\r\n<br />
-  location[ortsteil]
-  location[adresse]
+location[bezirk]<br />
+  location[ortsteil]<br />
+  location[adresse]<br />
   
 """
 /locations.json
@@ -46,14 +46,14 @@ biographies.json
 creates a new biography
 
 @params: 
-  biography[name]
-  biography[adresse]
-  biography[geburtsname]
-  biography[verlegedatum]
-  biography[geburtstag]
-  biography[geburtsort]
-  biography[biografie]
-  biography[info]
+  biography[name]<br />
+  biography[adresse]<br />
+  biography[geburtsname]<br />
+  biography[verlegedatum]<br />
+  biography[geburtstag]<br />
+  biography[geburtsort]<br />
+  biography[biografie]<br />
+  biography[info]<br />
   
 """
 /biographies.json
