@@ -4,7 +4,7 @@ one:
   name: MyString
   adress: MyString
   geburtsname: MyString
-  verlegerdatum: 2013-07-26 12:26:59
+  verlegedatum: 2013-07-26 12:26:59
   geburtstag: 2013-07-26 12:26:59
   geburtsort: MyString
   biografie: MyText
@@ -14,7 +14,7 @@ two:
   name: MyString
   adress: MyString
   geburtsname: MyString
-  verlegerdatum: 2013-07-26 12:26:59
+  verlegedatum: 2013-07-26 12:26:59
   geburtstag: 2013-07-26 12:26:59
   geburtsort: MyString
   biografie: MyText

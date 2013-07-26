@@ -18,7 +18,7 @@ class BiographiesControllerTest < ActionController::TestCase
 
   test "should create biography" do
     assert_difference('Biography.count') do
-      post :create, biography: { adress: @biography.adress, biografie: @biography.biografie, geburtsname: @biography.geburtsname, geburtsort: @biography.geburtsort, geburtstag: @biography.geburtstag, info: @biography.info, name: @biography.name, verlegerdatum: @biography.verlegerdatum }
+      post :create, biography: { adress: @biography.adress, biografie: @biography.biografie, geburtsname: @biography.geburtsname, geburtsort: @biography.geburtsort, geburtstag: @biography.geburtstag, info: @biography.info, name: @biography.name, verlegedatum: @biography.verlegedatum }
     end
 
     assert_redirected_to biography_path(assigns(:biography))
@@ -35,7 +35,7 @@ class BiographiesControllerTest < ActionController::TestCase
   end
 
   test "should update biography" do
-    patch :update, id: @biography, biography: { adress: @biography.adress, biografie: @biography.biografie, geburtsname: @biography.geburtsname, geburtsort: @biography.geburtsort, geburtstag: @biography.geburtstag, info: @biography.info, name: @biography.name, verlegerdatum: @biography.verlegerdatum }
+    patch :update, id: @biography, biography: { adress: @biography.adress, biografie: @biography.biografie, geburtsname: @biography.geburtsname, geburtsort: @biography.geburtsort, geburtstag: @biography.geburtstag, info: @biography.info, name: @biography.name, verlegedatum: @biography.verlegedatum }
     assert_redirected_to biography_path(assigns(:biography))
   end
 
