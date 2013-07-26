@@ -5,7 +5,7 @@ gem 'rails', '4.0.0'
 
 # Use postgis as the database for Active Record
 gem 'pg'
-gem 'activerecord-postgis-adapter'
+gem 'activerecord-postgis-adapter', github: 'dazuma/activerecord-postgis-adapter'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
