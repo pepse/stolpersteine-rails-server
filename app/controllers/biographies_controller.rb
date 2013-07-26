@@ -10,6 +10,7 @@ class BiographiesController < ApplicationController
   # GET /biographies/1
   # GET /biographies/1.json
   def show
+    @biography = Biography.find(params[:id])
   end
 
   # GET /biographies/new

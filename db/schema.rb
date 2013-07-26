@@ -11,21 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20130726103519) do
-
-  create_table "locations", force: true do |t|
-    t.string   "bezirk"
-    t.string   "ortsteil"
-    t.string   "adresse"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.spatial  "lnglat",     limit: {:srid=>4326, :type=>"point", :geographic=>true}
-  end
-
-  add_index "locations", ["lnglat"], :name => "index_locations_on_lnglat", :spatial => true
-
-=======
 ActiveRecord::Schema.define(version: 20130726104821) do
 
   create_table "biographies", force: true do |t|
@@ -42,5 +27,15 @@ ActiveRecord::Schema.define(version: 20130726104821) do
     t.integer  "location_id"
   end
 
->>>>>>> b9d3b82547e30751751fd659555254ea5db02204
+  create_table "locations", force: true do |t|
+    t.string   "bezirk"
+    t.string   "ortsteil"
+    t.string   "adresse"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.spatial  "lnglat",     limit: {:srid=>4326, :type=>"point", :geographic=>true}
+  end
+
+  add_index "locations", ["lnglat"], :name => "index_locations_on_lnglat", :spatial => true
+
 end
