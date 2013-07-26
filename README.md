@@ -22,7 +22,7 @@ returns all the locations
 creates a new location
 
 @params: 
-  location[bezirk]
+location[bezirk]<br>
   location[ortsteil]
   location[adresse]
   
