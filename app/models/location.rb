@@ -15,7 +15,6 @@ class Location < ActiveRecord::Base
       bezirk => self.bezirk
       bio_count => self.biographies.size
       bio_ids => self.biographies.pluck(:id)
-      ...
     }
   end
 end
