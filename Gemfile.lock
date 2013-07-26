@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/dazuma/activerecord-postgis-adapter.git
+  revision: 0454a768fe7e67cf0fd26d29fd2145a330fa478e
+  specs:
+    activerecord-postgis-adapter (0.6.5.nonrelease)
+      rgeo-activerecord (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -19,8 +26,6 @@ GEM
       activesupport (= 4.0.0)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
-    activerecord-postgis-adapter (0.6.5)
-      rgeo-activerecord (~> 0.5.0)
     activesupport (4.0.0)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
@@ -116,7 +121,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-postgis-adapter
+  activerecord-postgis-adapter!
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
