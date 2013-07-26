@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @biography.name %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @biography.adress %>
+</p>
+
+<p>
+  <strong>Geburtsname:</strong>
+  <%= @biography.geburtsname %>
+</p>
+
+<p>
+  <strong>Verlegerdatum:</strong>
+  <%= @biography.verlegerdatum %>
+</p>
+
+<p>
+  <strong>Geburtstag:</strong>
+  <%= @biography.geburtstag %>
+</p>
+
+<p>
+  <strong>Geburtsort:</strong>
+  <%= @biography.geburtsort %>
+</p>
+
+<p>
+  <strong>Biografie:</strong>
+  <%= @biography.biografie %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @biography.info %>
+</p>
+
+<%= link_to 'Edit', edit_biography_path(@biography) %> |
+<%= link_to 'Back', biographies_path %>
