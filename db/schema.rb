@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130726101801) do
+ActiveRecord::Schema.define(version: 20130726103519) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "postgis"
 
   create_table "locations", force: true do |t|
     t.string   "bezirk"
@@ -19,6 +23,9 @@ ActiveRecord::Schema.define(version: 20130726101801) do
     t.string   "adresse"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.spatial  "lnglat",     limit: {:srid=>4326, :type=>"point", :geographic=>true}
   end
+
+  add_index "locations", ["lnglat"], :name => "index_locations_on_lnglat", :spatial => true
 
 end
