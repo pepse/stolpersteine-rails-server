@@ -54,6 +54,7 @@ creates a new biography
   biography[geburtsort]<br />
   biography[biografie]<br />
   biography[info]<br />
+  biography[location_id]<br />
   
 """
 /biographies.json
