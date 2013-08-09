@@ -13,10 +13,17 @@ returns all the locations around a latlng within a radius
 
 ### GET
 returns all the locations
-
 """
 /locations.json
 """
+
+
+search for locations
+"""
+/locations/:lat/:lng/(:radius).json
+"""
+
+
 
 ### POST
 creates a new location
