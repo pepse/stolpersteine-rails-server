@@ -7,6 +7,8 @@ class Location < ActiveRecord::Base
   # But use a geographic implementation for the :lnglat column.
   set_rgeo_factory_for_column(:lnglat, RGeo::Geographic.spherical_factory(srid: 4326))
 
+  GEOG_FACTORY ||= RGeo::Geographic.spherical_factory(:srid => 4326)
+
   def as_json(options = nil)
    {
       :lng => self.lnglat.x,
@@ -16,4 +18,8 @@ class Location < ActiveRecord::Base
       :bio_ids => self.biographies.pluck(:id)
     }
   end
+  scope :nearby, lambda { |radius_in_km, lng, lat|
+    point = GEOG_FACTORY.point(lng, lat)
+    where("ST_DWithin(lnglat, ST_GeomFromText('#{point}'), #{radius_in_km.to_f*1000} )")
+  }
 end

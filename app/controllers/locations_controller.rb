@@ -4,7 +4,14 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
+      lat, lng = params[:lat], params[:lng]
+    radius = params[:radius] || 1
+
+    if lat and lng
+      @locations = Location.nearby(radius, lng.to_f, lat.to_f)
+    else
+      @locations = Location.all
+    end
   end
 
   # GET /locations/1

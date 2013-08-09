@@ -3,6 +3,8 @@ Stolpersteine::Application.routes.draw do
   resources :locations
   resources :biographies
 
+  get 'locations/:lat/:lng/(:radius)', to: 'locations#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
