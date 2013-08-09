@@ -1,17 +1,27 @@
 class BiographiesController < ApplicationController
   before_action :set_biography, only: [:show, :edit, :update, :destroy]
   respond_to :json, :html
-  
+
   # GET /biographies
   # GET /biographies.json
   def index
     @biographies = Biography.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @biographies }
+    end
   end
 
   # GET /biographies/1
   # GET /biographies/1.json
   def show
     @biography = Biography.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @biography }
+    end
   end
 
   # GET /biographies/new

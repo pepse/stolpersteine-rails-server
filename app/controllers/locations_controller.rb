@@ -7,13 +7,13 @@ class LocationsController < ApplicationController
   def index
     lat, lng = params[:lat], params[:lng]
     radius = params[:radius] || 1
-    
+
     if lat and lng
       @locations = Location.nearby(radius, lng.to_f, lat.to_f)
     else
       @locations = Location.all
     end
-    
+
     respond_to do |format|
       format.html
       format.json { render json: @locations }
@@ -23,6 +23,8 @@ class LocationsController < ApplicationController
   # GET /locations/1
   # GET /locations/1.json
   def show
+    @location = Location.find(params[:id])
+
     respond_to do |format|
       format.html
       format.json { render json: @location }
@@ -78,6 +80,7 @@ class LocationsController < ApplicationController
     end
   end
 
+  # Prevents using own json style
   def default_serializer_options
     { root: false }
   end
