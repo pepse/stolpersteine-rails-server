@@ -61,6 +61,7 @@ creates a new biography
   biography[geburtsort]<br />
   biography[biografie]<br />
   biography[info]<br />
+  biography[occupation]<br />
   biography[location_id]<br />
   
 """
