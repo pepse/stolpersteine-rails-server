@@ -55,7 +55,6 @@ creates a new biography
 
 @params: <br />
   biography[name]<br />
-  biography[adresse]<br />
   biography[geburtsname]<br />
   biography[verlegedatum]<br />
   biography[geburtstag]<br />
