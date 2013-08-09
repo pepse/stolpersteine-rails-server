@@ -25,6 +25,7 @@ creates a new location
 location[bezirk]<br />
   location[ortsteil]<br />
   location[adresse]<br />
+  location[lnglat]<br />
   
 """
 /locations.json

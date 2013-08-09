@@ -1,10 +1,11 @@
 class LocationsController < ApplicationController
+  respond_to :js, :html
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
   # GET /locations
   # GET /locations.json
   def index
-      lat, lng = params[:lat], params[:lng]
+    lat, lng = params[:lat], params[:lng]
     radius = params[:radius] || 1
 
     if lat and lng
@@ -12,11 +13,19 @@ class LocationsController < ApplicationController
     else
       @locations = Location.all
     end
+    respond_to  do |format|
+      format.html { render }
+      format.json { render :json => @locations.to_json }
+    end
   end
 
   # GET /locations/1
   # GET /locations/1.json
   def show
+    respond_to  do |format|
+      format.html { render }
+      format.json { render :json => @location.to_json }
+    end
   end
 
   # GET /locations/new
