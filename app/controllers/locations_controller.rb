@@ -1,22 +1,32 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
+  respond_to :json, :html
 
   # GET /locations
   # GET /locations.json
   def index
-      lat, lng = params[:lat], params[:lng]
+    lat, lng = params[:lat], params[:lng]
     radius = params[:radius] || 1
-
+    
     if lat and lng
       @locations = Location.nearby(radius, lng.to_f, lat.to_f)
     else
       @locations = Location.all
+    end
+    
+    respond_to do |format|
+      format.html
+      format.json { render json: @locations }
     end
   end
 
   # GET /locations/1
   # GET /locations/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @location }
+    end
   end
 
   # GET /locations/new
@@ -66,6 +76,10 @@ class LocationsController < ApplicationController
       format.html { redirect_to locations_url }
       format.json { head :no_content }
     end
+  end
+
+  def default_serializer_options
+    { root: false }
   end
 
   private

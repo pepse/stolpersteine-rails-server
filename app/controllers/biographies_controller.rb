@@ -1,6 +1,7 @@
 class BiographiesController < ApplicationController
   before_action :set_biography, only: [:show, :edit, :update, :destroy]
-
+  respond_to :json, :html
+  
   # GET /biographies
   # GET /biographies.json
   def index
