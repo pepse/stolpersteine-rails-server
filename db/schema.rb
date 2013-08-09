@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130809131930) do
+ActiveRecord::Schema.define(version: 20130809150036) do
 
   create_table "biographies", force: true do |t|
     t.string   "name"
     t.string   "geburtsname"
-    t.datetime "verlegedatum"
+    t.string   "verlegedatum"
     t.datetime "geburtstag"
     t.string   "geburtsort"
     t.text     "biografie"
