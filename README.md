@@ -32,7 +32,7 @@ creates a new location
 location[bezirk]<br />
   location[ortsteil]<br />
   location[adresse]<br />
-  location[lnglat]<br />
+  location[lnglat]  e.g. "POINT(23.456 53.23452)"<br />
   
 """
 /locations.json
